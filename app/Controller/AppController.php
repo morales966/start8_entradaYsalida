@@ -14,11 +14,11 @@
                                                         )
                                                     );
 
-		public function beforeRender(){
+		public function beforeRender() {
 
 		}
 
-		public function beforeFilter(){
+		public function beforeFilter() {
 
 		}
 
@@ -40,7 +40,7 @@
             return true;
         }
 
-        public function validateSessionTrue(){
+        public function validateSessionTrue() {
             if (AuthComponent::user('id')) {
                 $this->redirect(array('controller' => 'pages', 'action' => 'index'));
             }
