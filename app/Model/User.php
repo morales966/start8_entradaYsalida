@@ -146,7 +146,6 @@ class User extends AppModel {
 			$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
 		}
 	}
-	
 	/**
         * @author Diego Morales <dlmorales096@gmail.com>
         * @date(26-10-2020)
@@ -169,6 +168,23 @@ class User extends AppModel {
     */
 	public function get_user_email($email){
 		return $this->findByEmail($email);
+	}
+	/**
+        * @author Diego Morales <dlmorales096@gmail.com>
+        * @date(27-10-2020)
+        * @description Metodo para buscar los datos por el codigo ingresado
+        * @variables $code = codigo del usuario
+        * @return Datos por el código ingresado
+    */
+	public function find_code_user($code){
+		$conditions 			= array(
+        							'User.code' 	=> $code
+        						);
+		if ($this->find('count',compact('conditions')) > 0) {
+			return $this->find('first',compact('conditions'));
+		} else {
+			return 0;
+		}
 	}
 
 	
