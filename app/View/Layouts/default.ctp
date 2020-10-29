@@ -12,7 +12,8 @@
 			}
 			echo $this->fetch('AppCss');
 			echo $this->Html->meta('favicon.ico','img/favicon.png',array('type' => 'icon'));
-	    ?>
+		?>
+	    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 	</head>
 	<body>
 		<?php 
@@ -34,6 +35,7 @@
 		<?php if (AuthComponent::user('id')): ?>
 			</div>
 		<?php endif ?>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 	    <?php
     		echo $this->Html->script(array('lib/bootstrap.js','lib/parsley/parsley.js','lib/parsley/es.js'));
     		if (AuthComponent::user('id')) {

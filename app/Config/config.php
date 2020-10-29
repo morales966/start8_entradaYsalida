@@ -21,7 +21,12 @@ $config = array(
 		'from_email' 		=> array('Nuevo mensaje' => 'info@kebco.co'),
 		'contact_mail' 		=> array('info@kebco.co' => 'Nuevo mensaje')
 	),
-	'emails_defecto'		=> array('dlmorales98@misena.edu.co')
+	'emails_defecto'		=> array('dlmorales98@misena.edu.co'),
+	'variables' 				=> array(
+									'roles' 	=> array(
+															'admin' => 'admin'
+														)
+									)
 );
 
 ?>

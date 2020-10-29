@@ -7,19 +7,6 @@
         </a>
       </li>
     </ul>
-
-    <!-- BUSCADOR FORMULARIO
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form> -->
-
     <ul class="navbar-nav ml-auto">
     	<li class="nav-item">
 			<a href="#" class="nav-link"><?php echo AuthComponent::user('name') ?></a>
@@ -47,16 +34,16 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link">
+					<a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'index')) ?>" class="nav-link">
 						<p>
-							xxx
+							Usuarios
 						</p>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link">
+					<a href="<?php echo $this->Html->url(array('controller'=>'Pages','action'=>'informes')) ?>" class="nav-link">
 						<p>
-							xxx
+							Informes
 						</p>
 					</a>
 				</li>

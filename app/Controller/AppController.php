@@ -3,6 +3,8 @@
 	App::uses('Controller', 'Controller');
 
 	class AppController extends Controller {
+
+        public $helpers                            = array('Utilities');
         public $components                         = array(
                                                         'Session',
                                                         'Auth' => array(

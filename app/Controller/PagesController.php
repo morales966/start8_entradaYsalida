@@ -96,4 +96,10 @@ class PagesController extends AppController {
 		}
 	}
 
+	public function informes() {
+		$this->loadModel('Schedule');
+        $schedules 					= $this->Schedule->find('all');
+		$this->set(compact('schedules'));
+	}
+
 }

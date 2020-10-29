@@ -186,27 +186,16 @@ class User extends AppModel {
 			return 0;
 		}
 	}
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	/**
+        * @author Diego Morales <dlmorales096@gmail.com>
+        * @date(29-10-2020)
+        * @description Metodo que devuelve todos los usuarios
+        * @return Todos los usuarios
+    */
+	public function all_users() {
+		$this->recursive 	= -1;
+		return $this->find('all');
+	}
 
 
 
