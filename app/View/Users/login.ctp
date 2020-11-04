@@ -27,9 +27,7 @@
           <a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'remember_password')) ?>" class="btn btn-primary">
             Restablecer contraseña
           </a>
-          <a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'add')) ?>" class="btn btn-primary">
-            add
-          </a>
+          
         </form>
         
       </div>

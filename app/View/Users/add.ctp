@@ -21,10 +21,5 @@
         </a>
 		<?php echo $this->Form->end(__('Guardar')); ?>
 		</div>
-		<div class="actions">
-			<ul>
-				<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-			</ul>
-		</div>
 	</div>
 </div>
