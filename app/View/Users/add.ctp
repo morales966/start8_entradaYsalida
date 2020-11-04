@@ -1,17 +1,30 @@
-<div class="users form">
-<?php echo $this->Form->create('Usuario'); ?>
-	<fieldset>
-		<legend><?php echo __('Registro de usuario'); ?></legend>
-	<?php
-		echo $this->Form->input('nombre');
-		echo $this->Form->input('email');
-		echo $this->Form->input('password');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Guardar')); ?>
-</div>
-<div class="actions">
-	<ul>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-	</ul>
+<div class="content-wrapper">
+	<div class="container">
+		<div class="users form">
+		<?php echo $this->Form->create('Usuario'); ?>
+			<fieldset>
+				<legend><?php echo __('Registro de usuario'); ?></legend>
+			
+			<div class="form-group">
+				<?php echo $this->Form->input('nombre',array('placeholder' => 'Nombre completo','label' => false,'class' => 'form-control')); ?>
+			</div>
+			<div class="form-group">
+				<?php echo $this->Form->input('email',array('placeholder' => 'Correo electrónico','label' => false,'class' => 'form-control')); ?>
+			</div>
+			<div class="form-group">
+              <?php echo $this->Form->input('password',array('placeholder' => 'Contraseña','label' => false,'class' => 'form-control')); ?>
+         	</div>
+
+			</fieldset>
+		<a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'add')) ?>" class="btn btn-primary">
+            Guardar
+        </a>
+		<?php echo $this->Form->end(__('Guardar')); ?>
+		</div>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
+			</ul>
+		</div>
+	</div>
 </div>

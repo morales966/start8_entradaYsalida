@@ -1,7 +1,7 @@
 <div class="sidenav">
    <div class="login-main-text">
       <h2>Horario</h2>
-      <p>Lleva el control del horario de entrada y salida de tus empleados</p>
+      <p>Lleva el control del horario de entrada y salida de tus empleados y visitantes</p>
    </div>
   <div class="main">
      <div class="col-md-12 col-sm-12">
@@ -10,6 +10,8 @@
         </a>
      </div>
   </div>
+ 
+  
 </div>
 <div class="main">
    <div class="col-md-6 col-sm-12">
@@ -25,7 +27,11 @@
           <a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'remember_password')) ?>" class="btn btn-primary">
             Restablecer contraseña
           </a>
+          <a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'add')) ?>" class="btn btn-primary">
+            add
+          </a>
         </form>
+        
       </div>
    </div>
 </div>
