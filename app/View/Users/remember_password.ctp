@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="text-center">
-		<h1 class="">App</h1>
+		<h1 class="">Entrada y salida de empleados y visitantes</h1>
 	</div>
 
 	<div class="text-center">

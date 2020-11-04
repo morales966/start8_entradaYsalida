@@ -9,9 +9,9 @@ class PagesController extends AppController {
     }
 
 	public function index() {
-  		if (!AuthComponent::user('id')){
+  		 if (!AuthComponent::user('id')){
 			$this->redirect(array('controller'=> 'Users','action' => 'login'));	
-  		}
+  		} 
 	}
 
 

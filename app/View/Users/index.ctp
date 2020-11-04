@@ -1,17 +1,22 @@
 <div class="users index">
-	<h2><?php echo __('Users'); ?></h2>
+	<h2><?php echo __('Usuarios'); ?></h2>
+		<div class="actions">
+			<ul>
+				<?php echo $this->Html->link(('Registrar usuario'), array('action' => 'add')); ?>
+			</ul>
+		</div>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('email'); ?></th>
 			<th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
-	<?php foreach ($users as $user): ?>
+	<?php foreach ($Users as $user): ?>
 	<tr>
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['nombre']); ?>&nbsp;</td>
@@ -40,9 +45,4 @@
 	?>
 	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
-	</ul>
-</div>
+

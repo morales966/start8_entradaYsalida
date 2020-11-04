@@ -18,6 +18,9 @@
 							Cambiar a registro de salida
 			        	</a>
 					</div>
+					<a href="<?php echo $this->Html->url(array('controller' => 'Users', 'action'=>'add')) ?>" class="btn btn-primary">
+						Registrar usuario
+					</a>
 					<div class="col-md-6">
 						<a href="<?php echo $this->Html->url(array('controller' => 'Users','action'=>'login')) ?>" class="btn btn-primary">
 							Iniciar sesión

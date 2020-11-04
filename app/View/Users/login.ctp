@@ -19,7 +19,7 @@
               <?php echo $this->Form->input('email',array('placeholder' => 'Correo electrónico','label' => false,'class' => 'form-control')); ?>
           </div>
           <div class="form-group">
-              <?php echo $this->Form->input('password',array('placeholder' => 'Conntraseña','label' => false,'class' => 'form-control')); ?>
+              <?php echo $this->Form->input('password',array('placeholder' => 'Contraseña','label' => false,'class' => 'form-control')); ?>
           </div>
            <?php echo $this->Form->button('Iniciar sesión',array('class' => 'btn btn-primary')); ?>
           <a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'remember_password')) ?>" class="btn btn-primary">
