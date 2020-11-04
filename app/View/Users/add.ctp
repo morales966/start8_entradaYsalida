@@ -16,7 +16,7 @@
 				</div>
 				<div class="form-group">
 					<?php 
-					$roles = array('U'=>'Usuario','v'=>'Visitante','A'=>'Admin');
+					$roles = array('U'=>'Usuario','V'=>'Visitante','A'=>'Admin');
 					echo $this->Form->input('role', array('type'=>'select','options' => $roles,'label' => false,'class' => 'form-control'))  ?>
 					
 				</div>

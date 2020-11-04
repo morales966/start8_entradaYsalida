@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 	<div class="container">
 		<div class="users form">
-		<?php echo $this->Form->create('User'); ?>
+		<?php echo $this->Form->create('user',array('data-parsley-validate')); ?>
 			<fieldset>
 				<legend><?php echo __('Actualizar usuarios'); ?></legend>
 					<div class="form-group">
