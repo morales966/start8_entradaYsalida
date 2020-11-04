@@ -8,15 +8,16 @@
 						</ul>
 					</div>
 				<table cellpadding="0" cellspacing="0">
-				<thead>
-				<tr>
-						
-						<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-						<th><?php echo $this->Paginator->sort('email'); ?></th>
-						<th><?php echo $this->Paginator->sort('Contraseña'); ?></th>
-						<th class="actions"><?php echo __('Opciones'); ?></th>
-				</tr>
+				<thead class="thead-light">
+							<tr>
+								<th>Nombre</th>
+								<th>Correo eléctronico</th>
+								<th>Contraseña</th>
+								<th>Opciones</th>
+
+							</tr>
 				</thead>
+				
 				<tbody>
 				<?php foreach ($Users as $user): ?>
 				<tr>
