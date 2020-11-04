@@ -15,11 +15,10 @@
 				<?php echo $this->Form->input('password',array('placeholder' => 'Contraseña','label' => false,'class' => 'form-control')); ?>
 				</div>
 				<div class="form-group">
-					<select class="form-control" id="rolUser">
-						<option>Usuario</option>
-						<option>Visitante</option>
-						<option>Admin</option>
-					</select>
+					<?php 
+					$roles = array('U'=>'Usuario','v'=>'Visitante','A'=>'Admin');
+					echo $this->Form->input('role', array('type'=>'select','options' => $roles,'label' => false,'class' => 'form-control'))  ?>
+					
 				</div>
 			</fieldset>
 			<button class="btn btn-success" type="submit">Guardar</button>
