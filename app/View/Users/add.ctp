@@ -16,10 +16,9 @@
          	</div>
 
 			</fieldset>
-		<a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'add')) ?>" class="btn btn-primary">
-            Guardar
+		<a href="#" class="btn btn-primary">
+			<?php echo $this->Form->end(__('Guardar')) ?>
         </a>
-		<?php echo $this->Form->end(__('Guardar')); ?>
 		</div>
 	</div>
 </div>
