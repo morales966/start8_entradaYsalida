@@ -7,7 +7,8 @@
 							<?php echo $this->Html->link(('Registrar usuario'), array('action' => 'add')); ?>
 						</ul>
 					</div>
-				<table cellpadding="0" cellspacing="0">
+				<div class="table-responsive">
+				<table id="tableDT" class="table table-striped table-bordered" style="width:100%">
 				<thead class="thead-light">
 							<tr>
 								<th>Nombre</th>
@@ -19,21 +20,22 @@
 				</thead>
 				
 				<tbody>
-				<?php foreach ($Users as $user): ?>
-				<tr>
-					<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
-					<td><?php echo h($user['User']['nombre']); ?>&nbsp;</td>
-					<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
-					<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
-					<td class="actions">
-						<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
-						<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
-						<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['id']))); ?>
-					</td>
-				</tr>
-			<?php endforeach; ?>
+					<?php foreach ($Users as $user): ?>
+						<tr>
+							<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
+							<td><?php echo h($user['User']['nombre']); ?>&nbsp;</td>
+							<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
+							<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
+							<td class="actions">
+								<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
+								<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
+								<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['id']))); ?>
+							</td>
+						</tr>
+					<?php endforeach; ?>
 				</tbody>
 				</table>
+				</div>
 				<p>
 				<?php
 				echo $this->Paginator->counter(array(
