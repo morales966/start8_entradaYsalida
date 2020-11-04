@@ -6,7 +6,7 @@
 				<legend><?php echo __('Registro de usuario'); ?></legend>
 			
 			<div class="form-group">
-				<?php echo $this->Form->input('nombre',array('placeholder' => 'Nombre completo','label' => false,'class' => 'form-control')); ?>
+				<?php echo $this->Form->input('name',array('placeholder' => 'Nombre completo','label' => false,'class' => 'form-control')); ?>
 			</div>
 			<div class="form-group">
 				<?php echo $this->Form->input('email',array('placeholder' => 'Correo electrónico','label' => false,'class' => 'form-control')); ?>
