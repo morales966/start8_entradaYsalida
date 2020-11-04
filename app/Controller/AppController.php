@@ -16,9 +16,11 @@
                                                         )
                                                     );
 
+
+                                                    
 		public function beforeRender() {
 
-		}
+        }
 
 		public function beforeFilter() {
 
