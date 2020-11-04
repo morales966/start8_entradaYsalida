@@ -1,6 +1,10 @@
 <div class="container">
 	<div class="text-center">
+<<<<<<< Updated upstream
 		<h1 class="">Entrada y salida de empleados y visitantes</h1>
+=======
+		<h1 class="">Restablece tu contraseña</h1>
+>>>>>>> Stashed changes
 	</div>
 
 	<div class="text-center">
