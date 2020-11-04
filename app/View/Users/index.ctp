@@ -13,7 +13,7 @@
 								<tr>
 									<th>Nombre</th>
 									<th>Correo eléctronico</th>
-									<th>Contraseña</th>
+									<th>Rol</th>
 									<th>Opciones</th>
 
 								</tr>
@@ -24,7 +24,7 @@
 							<tr>
 								<td><?php echo h($user['User']['name']); ?>&nbsp;</td>
 								<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
-								<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
+								<td><?php echo h($user['User']['role']); ?>&nbsp;</td>
 								<td class="actions">
 									<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $user['User']['id'])); ?>
 									<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $user['User']['id'])); ?>

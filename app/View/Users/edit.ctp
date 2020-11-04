@@ -20,9 +20,8 @@
 		<div class="actions">
 			<h3><?php echo __('Opciones'); ?></h3>
 			<ul>
-
-			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $user['User']['id']), array('confirm' => __('¿Estás seguro/a de que quieres eliminar a # %s?', $user['User']['id']))); ?>
-			<?php echo $this->Html->link(__('Ver usuarios'), array('action' => 'index')); ?></li>
+				<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $user['User']['id']), array('confirm' => __('¿Estás seguro/a de que quieres eliminar a # %s?', $user['User']['id']))); ?>
+				<?php echo $this->Html->link(__('Ver usuarios'), array('action' => 'index')); ?></li>
 			</ul>
 		</div>
 	</div>

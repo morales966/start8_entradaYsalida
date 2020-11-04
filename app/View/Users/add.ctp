@@ -17,6 +17,9 @@
 
 			</fieldset>
 			<button class="btn btn-primary form-control" type="submit">Guardar</button>
+			<a href="<?php echo $this->Html->url(array('controller'=>'Users','action'=>'index')) ?>" class="btn btn-primary">
+           		 Atrás
+         	</a>
 		</form>
 		</div>
 	</div>
