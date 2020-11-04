@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 	<div class="container">	
 		<div class="users index">
-				<h2><?php echo __('Usuarios'); ?></h2>
+			<h2>Usuarios</h2>
 					<div class="actions">
 						<ul>
 							<?php echo $this->Html->link(('Registrar nuevo usuario'), array('action' => 'add')); ?>

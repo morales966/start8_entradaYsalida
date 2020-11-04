@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 	<div class="container">
 		<div class="users form">
-		<?php echo $this->Form->create('Usuario'); ?>
+		<?php echo $this->Form->create('User',array('data-parsley-validate')); ?>
 			<fieldset>
 				<legend><?php echo __('Registro de usuario'); ?></legend>
 			
@@ -16,9 +16,8 @@
          	</div>
 
 			</fieldset>
-		<a href="#" class="btn btn-primary">
-			<?php echo $this->Form->end(__('Guardar')) ?>
-        </a>
+			<button class="btn btn-primary form-control" type="submit">Guardar</button>
+		</form>
 		</div>
 	</div>
 </div>

@@ -16,7 +16,7 @@ class UsersController extends AppController {
 
 	public function view($id = null) {
 		if (!$this->User->exists($id)) {
-			throw new NotFoundException(__('Invalid user'));
+			throw new NotFoundException(__('Usuario inválido'));
 		}
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 		$this->set('user', $this->User->find('first', $options));
@@ -26,7 +26,7 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
-				$this->Flash->success(__('Guardado correctamente.'));
+				$this->Flash->success(('Guardado correctamente.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Flash->error(__('No se pudo guardar el usuario. Intentalo de nuevo.'));
