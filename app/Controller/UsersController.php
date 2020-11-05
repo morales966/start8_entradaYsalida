@@ -23,7 +23,6 @@ class UsersController extends AppController {
 	}
 
 	public function add() {
-		$roles = array($user['User']['role']);
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {

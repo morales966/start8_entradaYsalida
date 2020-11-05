@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 22-10-2020 a las 02:19:03
+-- Tiempo de generación: 05-11-2020 a las 17:16:56
 -- Versión del servidor: 10.4.10-MariaDB
 -- Versión de PHP: 5.6.40
 
@@ -27,6 +27,31 @@ USE `start_8`;
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `schedules`
+--
+
+DROP TABLE IF EXISTS `schedules`;
+CREATE TABLE IF NOT EXISTS `schedules` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `tipo` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `schedules`
+--
+
+INSERT INTO `schedules` (`id`, `user_id`, `tipo`, `created`) VALUES
+(1, 1, 1, '2020-10-28 03:22:04'),
+(2, 1, 1, '2020-10-29 15:37:22'),
+(3, 1, 0, '2020-10-29 16:51:34'),
+(4, 1, 1, '2020-11-04 02:41:38');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -34,22 +59,23 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `telephone` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `email` varchar(100) CHARACTER SET utf8 NOT NULL,
   `password` varchar(200) CHARACTER SET utf8 NOT NULL,
-  `hash_change_password` varchar(200) CHARACTER SET utf8 NOT NULL,
+  `hash_change_password` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `code` varchar(20) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `role` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `state` int(11) NOT NULL DEFAULT 0,
   `created` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `telephone`, `email`, `password`, `hash_change_password`, `role`, `state`, `created`) VALUES
-(1, 'Usuario 1', '0000000', 'dlmorales096@gmail.com', '6cf4806722799b7e0fa0c79622157939d06287fd', '', 'user', 1, '2020-06-16');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `hash_change_password`, `code`, `role`, `state`, `created`) VALUES
+(1, 'Usuario 1', 'dlmorales096@gmail.com', '6cf4806722799b7e0fa0c79622157939d06287fd', '', 'a1', 'U', 1, '2020-06-16'),
+(2, 'Diego Moralesssss', 'aaaa@aaaa.ss', '6cf4806722799b7e0fa0c79622157939d06287fd', NULL, 'a2', 'V', 0, '2020-11-05');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

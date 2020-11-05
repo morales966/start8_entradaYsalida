@@ -12,13 +12,15 @@
 					<?php echo $this->Form->input('email',array('placeholder' => 'Correo electrónico','label' => false,'class' => 'form-control')); ?>
 				</div>
 				<div class="form-group">
-				<?php echo $this->Form->input('password',array('placeholder' => 'Contraseña','label' => false,'class' => 'form-control')); ?>
+					<?php echo $this->Form->input('code',array('placeholder' => 'Código','label' => false,'class' => 'form-control')); ?>
+				</div>
+				<div class="form-group">
+					<?php echo $this->Form->input('password',array('placeholder' => 'Contraseña','label' => false,'class' => 'form-control')); ?>
 				</div>
 				<div class="form-group">
 					<?php 
-					$roles = array('U'=>'Usuario','V'=>'Visitante','A'=>'Admin');
-					echo $this->Form->input('role', array('type'=>'select','options' => $roles,'label' => false,'class' => 'form-control'))  ?>
-					
+					$roles = array('U'=>'Usuario','V'=>'Visitante','A'=>'Administrador');
+					echo $this->Form->input('role', array('type'=>'select','options' => $roles,'label' => false,'class' => 'form-control','empty' => 'Selecciona el rol'))  ?>
 				</div>
 			</fieldset>
 			<button class="btn btn-success" type="submit">Guardar</button>
